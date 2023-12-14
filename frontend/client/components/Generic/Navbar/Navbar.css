@@ -1,0 +1,41 @@
+nav {
+    background-color: #333;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title {
+    color: white;
+    margin: 0;
+}
+
+.navbar-list {
+    display: flex;
+    margin-right: 30px;
+}
+
+.nav-elem {
+    display: inline;
+    margin-right: 1rem;
+    position: relative;
+    cursor: pointer;
+    padding: 16px;
+    background-color: #333;
+    color: white;
+    border-right: 1px solid #ccc;
+    transition: background-color 0.1s;
+}
+
+.nav-elem:hover {
+    background-color: #222;
+}
+
+.navbar-space {
+    height: 4rem;
+}

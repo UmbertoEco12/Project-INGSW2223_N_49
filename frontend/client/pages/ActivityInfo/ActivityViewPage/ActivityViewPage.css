@@ -1,0 +1,43 @@
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically by default */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center text within items */
+
+    /* Add padding or margin as needed */
+    margin: 20px;
+}
+
+.image-uploader,
+.activity-details {
+    width: 100%;
+}
+
+.activity-details {
+    text-align: center;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .activity-container {
+        flex-direction: row;
+        /* Arrange items horizontally */
+        justify-content: space-between;
+        /* Add space between items */
+        align-items: flex-start;
+        /* Reset align-items for horizontal layout */
+    }
+
+    .image-uploader,
+    .activity-details {
+        width: 48%;
+        /* Adjust the width as needed, leaving space between items */
+    }
+
+    .activity-details {
+        text-align: left;
+    }
+}

@@ -1,0 +1,23 @@
+version: '3'
+services:
+  postgres:
+    build:
+      context: ./database
+    ports:
+      - "5432:5432"
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      - WEBSOCKET_ALLOWED_ORIGINS=http://192.168.1.74:3000
+    depends_on:
+      - postgres
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

@@ -1,0 +1,79 @@
+.ImageUploader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+}
+
+.ImageUploader-button {
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    max-height: initial;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out !important;
+}
+
+.ImageUploader-image {
+    max-width: 256px;
+    max-height: 256px;
+    min-width: 256px;
+    min-height: 256px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.ImageUploader-container:hover .ImageUploader-button {
+    display: inline-block;
+    opacity: 1;
+}
+
+.ImageUploader-image-container {
+    position: relative;
+    /* Ensure positioning context for the absolute button */
+}
+
+.ImageUploader-placeholder {
+    max-width: 256px;
+    max-height: 256px;
+    min-width: 256px;
+    min-height: 256px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: lightgrey;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.ImageUploader-button-container {
+    margin-top: 10px;
+    /* Adjust the margin as needed */
+}
+
+.ImageUploader-resetButton {
+    position: absolute !important;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: transparent;
+    cursor: pointer;
+    width: 256px;
+    height: 256px;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
