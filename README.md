@@ -1,52 +1,49 @@
-
 # Ratatouille23 Cuscione N86003575
 
-## Guida di Avvio Rapido
+## Quick Start Guide
 
-Questo README fornisce istruzioni rapide su come far partire l'applicazione utilizzando Docker Compose.
+This README provides quick instructions on how to launch the application using Docker Compose.
 
-### Prerequisiti
+### Prerequisites
 
-- Assicurati di avere Docker e Docker Compose installati sulla tua macchina.
+- Ensure you have Docker and Docker Compose installed on your machine.
 
-### Installazione e Avvio
+### Installation and Launch
 
-1. Naviga nella directory del progetto.
+1. Navigate to the project directory.
 
-3. Modifica il file `compose.yml` per includere il tuo indirizzo ip. Trova la variabile d'ambiente `WEBSOCKET_ALLOWED_ORIGINS` e cambiala come segue:
+2. Modify the `compose.yml` file to include your IP address. Find the `WEBSOCKET_ALLOWED_ORIGINS` environment variable and change it as follows:
 
     ```yaml
     services:
       backend:
         ...
         environment:
-          - WEBSOCKET_ALLOWED_ORIGINS=http://tuoindirizzoiplocale:3000
+          - WEBSOCKET_ALLOWED_ORIGINS=http://yourlocalip:3000
     ```
 
-    Sostituisci `nome-del-servizio` con il nome effettivo del servizio Docker che vuoi configurare.
+    Replace `service-name` with the actual name of the Docker service you want to configure.
 
-4. Esegui Docker Compose:
+3. Run Docker Compose:
 
     ```bash
     docker-compose up -d
     ```
 
-    Questo comando avvierà l'applicazione in background. Puoi monitorare i log eseguendo `docker-compose logs -f`.
+    This command will start the application in the background. You can monitor the logs by running `docker-compose logs -f`.
 
-5. L'applicazione dovrebbe essere ora accessibile all'indirizzo [http://localhost:3000/](http://localhost:3000/) nel tuo browser.
+4. The application should now be accessible at [http://localhost:3000/](http://localhost:3000/) in your browser.
 
-### Arresto dell'Applicazione
+### Stopping the Application
 
-Per arrestare l'applicazione, esegui il seguente comando nella directory del progetto:
+To stop the application, execute the following command in the project directory:
 
 ```bash
 docker-compose down
 ```
-### Dati dell'Applicazione
-All avvio dell' app vengono creati automaticamente
-un admin pizzeria con password: Password01.
+### Application Credentials
+Upon application startup, the following accounts are automatically created:
 
-Sono inoltre presenti anche altri account staff per l'attivita:
-waiter1, waiter2, manager, chef1.
-
-tutti gli account hanno password: Password01.
+Admin Pizzeria: username=admin, password=Password01
+Staff Accounts: waiter1, waiter2, manager, chef1; password for all: Password01.
+Feel free to explore the application using these credentials.
