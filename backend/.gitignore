@@ -75,5 +75,8 @@ build/
 ### VS Code ###
 .vscode/
 
+mvnw
+mvnw.cmd
+.mvn
 ## Database name and password ##
-src/main/resources/application.properties
+## src/main/resources/application.properties
