@@ -1,4 +1,13 @@
-# Ratatouille23 Cuscione N86003575
+# Restaurant Order & Menu Management App
+
+## Overview
+Developed a full-stack web application for restaurants to manage menus and orders efficiently. Built with React and TypeScript for the frontend, Java Spring for the backend, PostgreSQL for data storage, and Docker for containerized deployment. Features role-based access:
+- **Admins & Managers** can modify menu items and prices.
+- **Waiters** can place orders.
+- **Chefs** can mark orders as complete.
+- **Managers** can track and close orders upon payment.
+
+Designed to streamline restaurant operations with a structured and scalable architecture.
 
 ## Quick Start Guide
 
@@ -22,7 +31,7 @@ This README provides quick instructions on how to launch the application using D
           - WEBSOCKET_ALLOWED_ORIGINS=http://yourlocalip:3000
     ```
 
-    Replace `service-name` with the actual name of the Docker service you want to configure.
+    Replace `yourlocalip` with the actual IP address of your machine.
 
 3. Run Docker Compose:
 
@@ -41,9 +50,16 @@ To stop the application, execute the following command in the project directory:
 ```bash
 docker-compose down
 ```
+
 ### Application Credentials
 Upon application startup, the following accounts are automatically created:
 
-Admin Pizzeria: username=admin, password=Password01
-Staff Accounts: waiter1, waiter2, manager, chef1; password for all: Password01.
+- **Admin Pizzeria**:
+  - Username: `admin`
+  - Password: `Password01`
+- **Staff Accounts**:
+  - Usernames: `waiter1`, `waiter2`, `manager`, `chef1`
+  - Password for all: `Password01`
+
 Feel free to explore the application using these credentials.
+
